@@ -1,4 +1,3 @@
-# core/heuristics.py
 def detect_global_nav(pages: dict, threshold=0.6):
     """
     A link appearing on >60% pages is treated as global navigation

@@ -1,4 +1,3 @@
-# core/crawler.py
 import requests
 from bs4 import BeautifulSoup
 from collections import deque
@@ -29,6 +28,7 @@ def crawl_site(start_url: str, max_depth: int):
 
         for a in soup.find_all("a", href=True):
             link = normalize_url(url, a["href"])
+            
             if is_internal(start_url, link):
                 links.append(link)
                 queue.append((link, depth + 1))
